@@ -4,9 +4,44 @@ ol {
 }
 
 a {
+  color: inherit; /* успадковуємо колір тексту від батьківського елементу */
   text-decoration: none; /* скинули підкреслення у посилань */
 }
 
 button {
   cursor: pointer; /* змінили курсор на пальчик при наведенні на кнопку */
+}
+
+body {
+  margin: 0; /* скинули зовнішні відступи у браузера */
+  font-family: 'Montserrat', sans-serif; /* підключили шрифт */
+  line-height: 1.5; /* базовий міжрядковий інтервал */
+  color: #111111; /* базовий колір тексту */
+  background-color: #fafafa; /* базовий колір фону */
+}
+
+.page-logo {
+  color: #111111;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.11; /* 111.111% */
+  letter-spacing: -0.03em;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.menu-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: #fd9222;
 }
