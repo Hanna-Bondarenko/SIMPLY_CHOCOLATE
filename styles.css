@@ -1,3 +1,11 @@
+:root {
+  --black: #111;
+  --orange: #fd9222;
+  --light-orange: #fcf1e0;
+  --violet: #1e1823;
+  --white: #fff;
+}
+
 ul,
 ol {
   list-style-type: none; /* скинули всі маркери у списках від браузера */
@@ -16,12 +24,12 @@ body {
   margin: 0; /* скинули зовнішні відступи у браузера */
   font-family: 'Montserrat', sans-serif; /* підключили шрифт */
   line-height: 1.5; /* базовий міжрядковий інтервал */
-  color: #111111; /* базовий колір тексту */
+  color: var(--black); /* базовий колір тексту */
   background-color: #fafafa; /* базовий колір фону */
 }
 
 .page-logo {
-  color: #111111;
+  color: var(--black);
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -43,5 +51,147 @@ body {
 
 .menu-link:hover,
 .menu-link:focus {
-  color: #fd9222;
+  color: var(--orange);
+}
+
+/* ================HERO==================== */
+.main-hero {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: var(--white);
+}
+
+.buy-now-btn {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--white);
+  background: var(--orange);
+}
+
+.buy-now-btn:hover,
+.buy-now-btn:focus {
+  background-color: var(--light-orange);
+  color: var(--orange);
+}
+
+.how-made-link {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.how-made-link:hover,
+.how-made-link:focus {
+  color: var(--orange);
+}
+
+.scroll-down-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
+}
+
+.scroll-down-link:hover,
+.scroll-down-link:focus {
+  color: var(--orange);
+}
+
+/* ============ BENEFITS STYLES ============ */
+.benefits-list-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.benefits-list-text {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+/* ============ INGREDIENTS STYLES ============ */
+.ingredients-description {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.ingredients-list-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+/* ============ HOW MADE STYLES ============ */
+.how-made-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.how-made-list-item {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+/* ============ REVIEWS STYLES ============ */
+.reviews-list-fullname {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+  text-align: center;
+}
+
+.reviews-list-text {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(17, 17, 17, 0.7);
+}
+
+.leave-review-btn {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.leave-review-btn:hover,
+.leave-review-btn:focus {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+/* ============ FOOTER STYLES ============ */
+.page-footer-title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+}
+
+.contact-block {
+  font-style: normal;
+}
+
+.contact-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+}
+
+.contact-list-link {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+.contact-list-link:hover,
+.contact-list-link:focus {
+  color: var(--orange);
 }
