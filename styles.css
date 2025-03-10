@@ -225,10 +225,27 @@ body {
 }
 
 /* ============ HOW MADE STYLES ============ */
+.how-made-content-wrapper {
+  display: flex;
+  column-gap: 20px;
+}
+
+.how-made-text-wrapper {
+  flex-grow: 1;
+  padding: 32px;
+  border-radius: 15px;
+  background-color: var(--white);
+}
+
 .how-made-title {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.33;
+  margin-bottom: 28px;
+}
+
+.how-made-list {
+  padding-right: 26px;
 }
 
 .how-made-list-item {
@@ -237,6 +254,9 @@ body {
   letter-spacing: -0.02em;
 }
 
+.how-made-list-item:not(:last-child) {
+  margin-bottom: 24px;
+}
 /* ============ REVIEWS STYLES ============ */
 
 .reviews {
