@@ -267,6 +267,7 @@ body {
   font-weight: 600;
   line-height: 1.33;
   text-align: center;
+  margin-bottom: 24px;
 }
 
 .reviews-list-text {
@@ -298,7 +299,22 @@ body {
 }
 
 /* ============ FOOTER STYLES ============ */
+
+.page-footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--violet);
+  color: var(--white);
+}
+
+.page-footer-top-block {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 .page-footer-title {
+  max-width: 300px;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.21;
@@ -313,6 +329,11 @@ body {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.29;
+  margin-bottom: 14px;
+}
+
+.contact-list-item:not(:last-child) {
+  margin-bottom: 4px;
 }
 
 .contact-list-link {
@@ -324,4 +345,8 @@ body {
 .contact-list-link:hover,
 .contact-list-link:focus {
   color: var(--orange);
+}
+
+.page-footer-bottom-block {
+  padding-top: 24px;
 }
