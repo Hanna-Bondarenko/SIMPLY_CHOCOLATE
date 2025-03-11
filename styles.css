@@ -197,15 +197,40 @@ body {
 }
 
 /* ============ BENEFITS STYLES ============ */
+.benefits {
+  margin-top: 72px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--violet);
+  color: var(--white);
+}
+
+.benefits-container {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
+.benefits-list {
+  display: flex;
+  column-gap: 88px;
+}
+
+.benefits-list-item {
+  width: calc((100% - 2 * 88px) / 3);
+}
+
 .benefits-list-title {
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 18px;
 }
 
 .benefits-list-text {
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* ============ INGREDIENTS STYLES ============ */
