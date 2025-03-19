@@ -3,7 +3,7 @@
   --orange: #fd9222;
   --light-orange: #fcf1e0;
   --violet: #1e1823;
-  --white: #fff;
+  --white: #fafafa;
 }
 
 h1,
@@ -167,6 +167,10 @@ body {
   background-color: var(--violet);
   color: var(--white);
   border-radius: 30px;
+  background-image: linear-gradient(rgba(30, 24, 35, 0.4), rgba(30, 24, 35, 0.4)),
+    url('../images/hero/bg.jpg');
+  background-size: cover;
+  background-color: #303030;
 }
 
 .hero-content {
@@ -174,6 +178,7 @@ body {
   padding-bottom: 40px;
   padding-left: 56px;
   padding-right: 56px;
+  color: var(--white);
 }
 
 .main-hero {
@@ -564,4 +569,60 @@ body {
 
 .page-footer-bottom-block {
   padding-top: 24px;
+}
+
+/* <!-- ==================BACKDROP================== --> */
+
+.backdrop {
+  position: fixed; /* фіксуємо елемент на екрані */
+  top: 0; /* відступ від верхнього краю */
+  left: 0; /* відступ від лівого краю */
+  width: 100%; /* ширина елемента */
+  height: 100%; /* висота елемента */
+  background-color: rgba(0, 0, 0, 0.5); /* колір фону */
+  z-index: 99999999; /* індекс над іншими елементами */
+  opacity: 0; /* прозорість */
+  visibility: hidden; /* елемент не видимий */
+
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1); /* плавний перехід */
+  /* display: none; */
+}
+
+.backdrop.is-open {
+  opacity: 1; /* повертаємо прозорість */
+  visibility: visible; /* робимо елемент видимим */
+}
+
+.modal {
+  position: absolute; /* абсолютне позиціонування */
+  top: 50%; /* відступ від верхнього краю */
+  left: 50%; /* відступ від лівого краю */
+  transform: translate(-50%, -50%); /* центруємо модальне вікно */
+  width: 517px; /* ширина модального вікна */
+  min-height: 794px; /* мінімальна висота модального вікна */
+  background-color: var(--white); /* колір фону */
+  border-radius: 15px; /* радіус закруглення */
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 0;
+  border: none;
+  background-color: transparent; /* прозорий фон */
+  line-height: 0; /* вирівнюємо текст по вертикалі */
+  stroke: var(--black);
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  stroke: var(--orange);
 }
