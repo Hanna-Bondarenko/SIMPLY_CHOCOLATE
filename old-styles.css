@@ -1,0 +1,756 @@
+:root {
+  --black: #111;
+  --orange: #fd9222;
+  --light-orange: #fcf1e0;
+  --violet: #1e1823;
+  --white: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0; /* скинули зовнішні відступи у заголовків */
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0; /* скинули зовнішні відступи у списках */
+  padding-left: 0; /* скинули внутрішні відступи у списках від браузера */
+  list-style-type: none; /* скинули всі маркери у списках від браузера */
+}
+
+a {
+  color: inherit; /* успадковуємо колір тексту від батьківського елементу */
+  text-decoration: none; /* скинули підкреслення у посилань */
+}
+
+button {
+  cursor: pointer; /* змінили курсор на пальчик при наведенні на кнопку */
+}
+
+img {
+  display: block; /* зробили картинки блочними елементами */
+}
+
+body {
+  margin: 0; /* скинули зовнішні відступи у браузера */
+  font-family: 'Montserrat', sans-serif; /* підключили шрифт */
+  line-height: 1.5; /* базовий міжрядковий інтервал */
+  color: var(--black); /* базовий колір тексту */
+  background-color: #fafafa; /* базовий колір фону */
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.accent-color {
+  color: #fd9222;
+}
+
+.container {
+  max-width: 1168px; /* максимальна ширина контейнера */
+  margin-right: auto; /* автоматичний відступ справа */
+  margin-left: auto; /* автоматичний відступ зліва */
+  padding-right: 16px; /* внутрішній відступ справа */
+  padding-left: 16px; /* внутрішній відступ зліва */
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.section-paddings {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* =============HEADER================= */
+.page-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 90px; /* відстань між елементами */
+}
+
+.page-navigation {
+  align-items: center; /* вирівнюємо елементи по вертикалі */
+  display: flex;
+  justify-content: space-between; /* рівномірно розподіляємо елементи по ширині */
+  flex-grow: 1; /* розтягуємо меню на всю доступну ширину */
+}
+
+.page-logo {
+  display: flex;
+  align-items: center;
+  color: var(--black);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.11; /* 111.111% */
+  letter-spacing: -0.03em;
+}
+
+.page-logo-icon {
+  margin-left: 4px;
+}
+.menu {
+  display: flex; /* вирівнюємо елементи горизонтально */
+  column-gap: 24px; /* відстань між елементами */
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.menu-link {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* плавний перехід кольору */
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--orange);
+}
+
+.social-list {
+  display: flex;
+  column-gap: 18px;
+}
+
+.social-list-link {
+  display: block;
+  stroke: var(--black);
+  fill: none;
+  line-height: 0;
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1); /* плавний перехід кольору */
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  stroke: var(--orange);
+}
+/* ================HERO==================== */
+
+.hero {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--violet);
+  color: var(--white);
+  border-radius: 30px;
+  background-image: linear-gradient(rgba(30, 24, 35, 0.4), rgba(30, 24, 35, 0.4)),
+    url('../images/hero/bg.jpg');
+  background-size: cover;
+  background-color: #303030;
+}
+
+.hero-content {
+  padding-top: 381px;
+  padding-bottom: 40px;
+  padding-left: 56px;
+  padding-right: 56px;
+  color: var(--white);
+}
+
+.main-hero {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: var(--white);
+}
+.main-title {
+  max-width: 484px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+}
+
+.hero-content-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.buy-now-btn {
+  min-width: 144px;
+  height: 45px;
+  padding: 14px 40px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--white);
+  background: var(--orange);
+  border: none;
+  border-radius: 100px;
+  margin-right: 14px;
+}
+
+.buy-now-btn:hover,
+.buy-now-btn:focus {
+  background-color: var(--light-orange);
+  color: var(--orange);
+}
+
+.how-made-link {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.how-made-link:hover,
+.how-made-link:focus {
+  color: var(--orange);
+}
+
+.scroll-down-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
+  margin-left: auto;
+}
+
+.scroll-down-link:hover,
+.scroll-down-link:focus {
+  color: var(--orange);
+}
+
+/* ============ BENEFITS STYLES ============ */
+.benefits {
+  margin-top: 72px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--violet);
+  color: var(--white);
+}
+
+.benefits-container {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
+.benefits-list {
+  display: flex;
+  column-gap: 88px;
+}
+
+.benefits-list-item {
+  width: calc((100% - 2 * 88px) / 3);
+}
+
+.benefits-list-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.benefits-list-text {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============ INGREDIENTS STYLES ============ */
+.ingredients-section-title {
+  max-width: 412px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 28px;
+}
+
+.ingredients-description {
+  max-width: 486px;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 19px;
+}
+
+.ingredients-list-item {
+  position: relative;
+  width: calc((100% - 57px) / 4);
+  padding: 32px 28px;
+  border-radius: 15px;
+  border: 1px solid var(--orange);
+  overflow: hidden;
+}
+
+.ingredients-list-item:nth-child(4n + 1) {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.ingredients-list-item:nth-child(even) {
+  background-color: var(--white);
+}
+
+.ingredients-list-item:nth-child(4n - 1) {
+  color: var(--white);
+  background-color: var(--violet);
+  border-color: var(--violet);
+}
+
+.ingredients-list-img {
+  margin-bottom: 36px;
+}
+
+.ingredients-list-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.ingredient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #ffffff;
+  color: #111111;
+  border-radius: 15px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 20px;
+}
+
+.ingredients-list-item:hover .ingredient-overlay {
+  transform: translateY(0%);
+}
+
+.ingredient-overlay-title {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.ingredient-overlay-categories {
+  display: flex;
+  column-gap: 6px;
+  margin-bottom: 14px;
+}
+
+.ingredient-overlay-category {
+  font-size: 10px;
+  line-height: 1.2;
+  padding: 6px 16px;
+  border: 1px solid #fd9222;
+  border-radius: 35px;
+}
+
+.ingredient-overlay-category-primary {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.ingredient-overlay-category-secondary {
+  background-color: #fafafa;
+}
+
+.ingredient-overlay-text {
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+}
+/* ============ HOW MADE STYLES ============ */
+.how-made-content-wrapper {
+  display: flex;
+  column-gap: 20px;
+}
+
+.how-made-text-wrapper {
+  flex-grow: 1;
+  padding: 32px;
+  border-radius: 15px;
+  background-color: var(--white);
+}
+
+.how-made-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+  margin-bottom: 28px;
+}
+
+.how-made-list {
+  padding-right: 26px;
+}
+
+.how-made-list-item {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  padding-left: 16px;
+}
+
+.how-made-list-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.how-made-list-item::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #4c4c4c;
+  border: 1px solid #eceded;
+}
+
+/* ============ REVIEWS STYLES ============ */
+
+.reviews {
+  padding-bottom: 100px;
+}
+
+.reviews-title {
+  margin-bottom: 90px;
+}
+
+.reviews-list {
+  display: flex;
+  column-gap: 28px;
+  margin-bottom: 50px;
+}
+
+.reviews-list-item {
+  position: relative;
+  width: calc((100% - 56px) / 3);
+  padding: 56px 24px 24px;
+  background-color: var(--white);
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
+}
+
+.reviews-list-avatar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reviews-list-fullname {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.reviews-list-text {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(17, 17, 17, 0.7);
+}
+
+.leave-review-btn {
+  display: block;
+  min-width: 222px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100px;
+  border: 1px solid #fd9222;
+  color: #111111;
+  background-color: var(--white);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.leave-review-btn:hover,
+.leave-review-btn:focus {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+/* ============ FOOTER STYLES ============ */
+
+.page-footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--violet);
+  color: var(--white);
+}
+
+.page-footer-top-block {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.page-footer-title {
+  max-width: 300px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+}
+
+.contact-block {
+  font-style: normal;
+}
+
+.contact-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  margin-bottom: 14px;
+}
+
+.contact-list-item:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.contact-list-link {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-list-link:hover,
+.contact-list-link:focus {
+  color: var(--orange);
+}
+
+.page-footer-bottom-block {
+  padding-top: 24px;
+}
+
+/* <!-- ==================BACKDROP================== --> */
+
+.backdrop {
+  position: fixed; /* фіксуємо елемент на екрані */
+  top: 0; /* відступ від верхнього краю */
+  left: 0; /* відступ від лівого краю */
+  width: 100%; /* ширина елемента */
+  height: 100%; /* висота елемента */
+  background-color: rgba(0, 0, 0, 0.5); /* колір фону */
+  z-index: 99999999; /* індекс над іншими елементами */
+  opacity: 0; /* прозорість */
+  visibility: hidden; /* елемент не видимий */
+
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1); /* плавний перехід */
+  /* display: none; */
+}
+
+.backdrop.is-open {
+  opacity: 1; /* повертаємо прозорість */
+  visibility: visible; /* робимо елемент видимим */
+}
+
+.modal {
+  position: absolute; /* абсолютне позиціонування */
+  top: 50%; /* відступ від верхнього краю */
+  left: 50%; /* відступ від лівого краю */
+  transform: translate(-50%, -50%); /* центруємо модальне вікно */
+  width: 517px; /* ширина модального вікна */
+  min-height: 794px; /* мінімальна висота модального вікна */
+  background-color: var(--white); /* колір фону */
+  border-radius: 15px; /* радіус закруглення */
+  padding: 40px; /* внутрішні відступи */
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 0;
+  border: none;
+  background-color: transparent; /* прозорий фон */
+  line-height: 0; /* вирівнюємо текст по вертикалі */
+  stroke: var(--black);
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  stroke: var(--orange);
+}
+
+.review-form-description {
+  max-width: 298px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.03em; /* міжбуквений інтервал */
+  text-transform: uppercase; /* перетворюємо текст великими літерами */
+  color: var(--black);
+  margin-bottom: 40px;
+}
+
+.review-form-field-wrapper {
+  margin-bottom: 18px;
+}
+
+.review-form-field-label {
+  display: block; /* блочний елемент */
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+  margin-bottom: 8px;
+}
+
+.review-form-input {
+  width: 100%;
+  height: 68px;
+  border: 1px solid rgba(17, 17, 17, 0.05);
+  border-radius: 13px;
+  padding-left: 62px;
+  background-color: transparent; /* прозорий фон */
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-input:focus {
+  border-color: var(--orange);
+  outline: transparent; /* скидаємо стандартний фокус */
+}
+
+.review-form-input-wrapper {
+  position: relative; /* відносне позиціонування */
+}
+
+.review-form-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%); /* центруємо іконку по вертикалі */
+  stroke: #404040;
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1); /* плавний перехід */
+}
+
+.review-form-input:focus + .review-form-field-icon {
+  stroke: var(--orange);
+}
+
+.review-form-message {
+  width: 100%;
+  height: 137px;
+  border: 1px solid rgba(17, 17, 17, 0.05);
+  border-radius: 13px;
+  background-color: transparent;
+  resize: none;
+  padding: 22px 24px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-message:focus {
+  border-color: var(--orange);
+  outline: transparent;
+}
+
+.review-form-message::placeholder {
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+}
+
+.review-form-checkbox-label {
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.6);
+}
+
+.review-form-checkbox-wrapper {
+  margin-bottom: 40px;
+}
+.review-form-own-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  cursor: pointer;
+  fill: transparent;
+  margin-right: 12px;
+}
+
+.review-form-checkbox:checked + .review-form-checkbox-label .review-form-own-checkbox {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  fill: var(--white);
+}
+
+.review-form-checkbox:focus + .review-form-checkbox-label .review-form-own-checkbox {
+  outline: 2px solid rgba(0, 0, 255, 0.5);
+}
+
+.privacy-policy-link {
+  text-decoration: underline;
+  color: var(--orange);
+}
+.review-form-submit {
+  min-width: 117px;
+  height: 45px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--orange);
+  color: var(--white);
+  transition: color 250ms linear, background-color 250ms linear;
+}
+
+.review-form-submit:hover,
+.review-form-submit:focus {
+  color: var(--orange);
+  background-color: var(--light-orange);
+}
