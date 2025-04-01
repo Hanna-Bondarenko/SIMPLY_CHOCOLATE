@@ -302,6 +302,7 @@ body {
   background-image: linear-gradient(rgba(30, 24, 35, 0.4), rgba(30, 24, 35, 0.4)),
     url('../images/hero/bg_mobile.jpg');
   background-size: cover; /* робимо фон на всю ширину */
+  background-position: center; /* центрируем фон */
   background-color: #303030;
 }
 
@@ -323,5 +324,6 @@ body {
 }
 .hero-content-wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
