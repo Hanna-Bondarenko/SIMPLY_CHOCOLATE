@@ -309,8 +309,8 @@ body {
 .hero-content {
   padding-top: 395px;
   padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
   color: var(--white);
 }
 
@@ -323,7 +323,42 @@ body {
   margin-bottom: 32px;
 }
 .hero-content-wrapper {
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
+  gap: 32px;
   align-items: center;
+}
+
+.buy-now-btn {
+  min-width: 120px;
+  height: 41px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--white);
+  background: var(--orange);
+  border: none;
+  border-radius: 100px;
+  margin-right: 14px;
+}
+
+.buy-now-btn:hover,
+.buy-now-btn:focus {
+  background-color: var(--light-orange);
+  color: var(--orange);
+}
+.how-made-link {
+  min-width: 159px;
+  height: 41px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--white);
+  border-radius: 100px;
+  padding: 12px 28px;
+}
+
+.how-made-link:hover,
+.how-made-link:focus {
+  color: var(--orange);
 }
