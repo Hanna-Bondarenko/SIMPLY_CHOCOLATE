@@ -402,15 +402,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--orange);
   width: 28px;
   height: 28px;
   border-radius: 50%;
   background-color: var(--white);
-  fill: var(--orange);
   transition: background-color 250ms linear, fill 250ms linear;
 }
-
 .scroll-down-link:hover .scroll-down-icon-wrapper {
   background-color: var(--orange);
-  fill: var(--white);
+  color: var(--white);
 }
