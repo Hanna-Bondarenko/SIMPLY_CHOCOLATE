@@ -35,6 +35,7 @@ button {
 
 img {
   display: block; /* зробили картинки блочними елементами */
+  max-width: 100%; /* скинули максимальну ширину у картинок */
 }
 
 body {
@@ -293,9 +294,10 @@ body {
 
 /* ===========HERO=========== */
 .hero {
-  max-width: 375px; /* максимальна ширина контейнера */
+  max-width: 100%; /* максимальна ширина контейнера */
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 60px;
   color: var(--white);
   background-repeat: no-repeat; /* скинули повторення фону */
   background-position: center; /* центрируем фон */
@@ -303,7 +305,7 @@ body {
   background-size: cover; /* робимо фон на всю ширину */
   border-radius: 30px;
   background-image: linear-gradient(rgba(30, 24, 35, 0.4), rgba(30, 24, 35, 0.4)),
-    url('../images/hero/bg_mobile.jpg');
+    url('/images/hero/mobile-hero-min.jpg');
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -312,16 +314,23 @@ body {
   (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.4) 100%),
-      url(./images/hero/bg_mobile2x.jpg);
+      url(./images/hero/mobile-hero@2x-min.jpg);
     background-size: cover;
   }
 }
 
 .hero-container {
+  width: 100%;
   padding-left: 38px;
   padding-right: 38px;
   padding-top: 395px;
   padding-bottom: 20px;
+}
+
+.hero-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
 }
 
 .main-title {
@@ -332,14 +341,14 @@ body {
   line-height: 1.21;
   letter-spacing: -0.03em;
 }
-.hero-content-wrapper {
+/* .hero-content-wrapper {
   min-width: 299px;
   display: flex;
   flex-wrap: wrap;
   row-gap: 32px;
 
   align-items: center;
-}
+} */
 
 .buy-now-btn {
   min-width: 120px;
@@ -412,4 +421,42 @@ body {
 .scroll-down-link:hover .scroll-down-icon-wrapper {
   background-color: var(--orange);
   color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px; /* максимальна ширина контейнера */
+    background-image: linear-gradient(rgba(30, 24, 35, 0.4), rgba(30, 24, 35, 0.4)),
+      url('./images/hero/tablet-hero-min.jpg');
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.4) 100%),
+        url(./images/hero/tablet-hero@2x-min.jpg);
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and (min-width: 1168px) {
+  .hero {
+    max-width: 1200px; /* максимальна ширина контейнера */
+    background-image: linear-gradient(rgba(30, 24, 35, 0.4), rgba(30, 24, 35, 0.4)),
+      url('./images/hero/desktop-hero-min.jpg');
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.4) 100%),
+        url(./images/hero/desktop-hero@2x-min.jpg);
+      background-size: cover;
+    }
+  }
 }
